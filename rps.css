@@ -104,3 +104,56 @@ button:focus {outline:0;}
     left: 0;
     font-size: 30px;
 }
+
+@media (max-width: 2300px) {
+    h1 {
+        left: 51%;
+        font-size: 6vh;
+    }
+
+    .paper {
+        position: fixed;
+        top: 27%;
+        left: 46%;
+        cursor: pointer;
+        transform: scale(0.8)
+    }
+
+    .paper:hover {
+        transform: scale(1)
+    }
+
+    .rock {
+        position: fixed;
+        top: 30%;
+        left: 36%;
+        cursor: pointer;
+        transform: scale(0.8)
+    }
+
+    .rock:hover {
+        transform: scale(1)
+    }
+
+    .scissors {
+        position: fixed;
+        top: 27%;
+        left: 56%;
+        cursor: pointer;
+        transform: scale(0.8)
+    }
+
+    .scissors:hover {
+        transform: scale(1)
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    button:hover {
+        height: 7vh;
+        width: 7vw;
+        font-size: 24px;
+    }
+}
