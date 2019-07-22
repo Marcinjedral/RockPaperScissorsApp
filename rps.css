@@ -1,159 +1,517 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: rgb(255, 128, 64);
-    font-family: 'Righteous', cursive;
+  background-color: rgb(255, 128, 64);
+  font-family: "Righteous", cursive;
 }
 
 h1 {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    font-size: 7vh;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-size: 7vh;
 }
 
 h2 {
-    position: absolute;
-    top: 60%;
-    left: 65%;
+  position: absolute;
+  top: 60%;
+  left: 65%;
 }
 
 .paper {
+  position: fixed;
+  top: 27%;
+  left: 46%;
+  cursor: pointer;
+}
+
+.paper:hover {
+  transform: scale(1.2);
+}
+
+.rock {
+  position: fixed;
+  top: 30%;
+  left: 36%;
+  cursor: pointer;
+}
+
+.rock:hover {
+  transform: scale(1.2);
+}
+
+.scissors {
+  position: fixed;
+  top: 27%;
+  left: 56%;
+  cursor: pointer;
+}
+
+.scissors:hover {
+  transform: scale(1.2);
+}
+
+button {
+  position: absolute;
+  display: inline-block;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  font-family: "Righteous", cursive;
+  background-color: transparent;
+  border: 2px solid black;
+  font-size: 20px;
+  height: 6vh;
+  width: 6vw;
+}
+
+button:hover {
+  height: 8vh;
+  width: 8vw;
+  font-size: 28px;
+  transition: linear 0.4s;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.results {
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  font-size: 20px;
+}
+
+.results h2 {
+  position: relative;
+  top: 40%;
+  left: 0;
+  font-size: 30px;
+}
+
+.stats {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  font-size: 20px;
+}
+
+.stats h2 {
+  position: relative;
+  top: 40%;
+  left: 0;
+  font-size: 30px;
+}
+
+@media (max-width: 2300px) {
+  h1 {
+    left: 51%;
+    font-size: 6vh;
+  }
+
+  .paper {
     position: fixed;
     top: 27%;
     left: 46%;
     cursor: pointer;
-}
+    transform: scale(0.8);
+  }
 
-.paper:hover {
-    transform: scale(1.2)
-}
+  .paper:hover {
+    transform: scale(1);
+  }
 
-.rock {
+  .rock {
     position: fixed;
     top: 30%;
     left: 36%;
     cursor: pointer;
-}
+    transform: scale(0.8);
+  }
 
-.rock:hover {
-    transform: scale(1.2)
-}
+  .rock:hover {
+    transform: scale(1);
+  }
 
-.scissors {
+  .scissors {
     position: fixed;
     top: 27%;
     left: 56%;
     cursor: pointer;
-}
+    transform: scale(0.8);
+  }
 
-.scissors:hover {
-    transform: scale(1.2)
-}
+  .scissors:hover {
+    transform: scale(1);
+  }
 
-button {
-    position: absolute;
-    display: inline-block;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    font-family: 'Righteous', cursive;
-    background-color: transparent;
-    border: 2px solid black;
-    font-size: 20px;
-    height: 5vh;
-    width: 5vw;
-}
+  button {
+    font-size: 18px;
+  }
 
-button:hover {
+  button:hover {
     height: 7vh;
     width: 7vw;
-    font-size: 28px;
+    font-size: 24px;
+    transition: linear 0.4s;
+  }
+
+  button:focus {
+    outline: 0;
+  }
 }
 
-button:focus {outline:0;}
+@media (max-width: 1600px) {
+  h1 {
+    left: 50%;
+    font-size: 55px;
+  }
 
-.results {
-    position: absolute;
-    top: 60%;
+  .paper {
+    position: fixed;
+    top: 27%;
+    left: 42%;
+    cursor: pointer;
+    transform: scale(0.7);
+  }
+
+  .paper:hover {
+    transform: scale(0.9);
+  }
+
+  .rock {
+    position: fixed;
+    top: 30%;
     left: 25%;
-    font-size: 20px;
-}
+    cursor: pointer;
+    transform: scale(0.7);
+  }
 
-.results h2 {
-    position: relative;
-    top: 40%;
-    left: 0;
-    font-size: 30px;
-}
+  .rock:hover {
+    transform: scale(0.9);
+  }
 
-.stats {
+  .scissors {
+    position: fixed;
+    top: 27%;
+    left: 59%;
+    cursor: pointer;
+    transform: scale(0.7);
+  }
+
+  .scissors:hover {
+    transform: scale(0.9);
+  }
+
+  button {
+    position: fixed;
+    left: 50%;
+    font-size: 25px;
+    height: 80px;
+    width: 140px;
+  }
+
+  button:hover {
+    height: 100px;
+    width: 160px;
+    font-size: 25px;
+  }
+
+  button:focus {
+    outline: 0;
+  }
+
+  .results {
     position: absolute;
-    top: 60%;
-    left: 70%;
-    font-size: 20px;
-}
+    top: 73%;
+    left: 12%;
+    font-size: 25px;
+  }
 
-.stats h2 {
+  .results h2 {
     position: relative;
     top: 40%;
     left: 0;
-    font-size: 30px;
+    font-size: 35px;
+  }
+
+  .stats {
+    position: absolute;
+    top: 73%;
+    left: 72%;
+    font-size: 25px;
+  }
+
+  .stats h2 {
+    position: relative;
+    top: 40%;
+    left: 0;
+    font-size: 35px;
+  }
 }
 
-@media (max-width: 2300px) {
-    h1 {
-        left: 51%;
-        font-size: 6vh;
-    }
+@media (max-width: 900px) {
+  h1 {
+    left: 50%;
+    font-size: 38px;
+  }
 
-    .paper {
-        position: fixed;
-        top: 27%;
-        left: 46%;
-        cursor: pointer;
-        transform: scale(0.8)
-    }
+  .paper {
+    position: fixed;
+    top: 27%;
+    left: 35%;
+    cursor: pointer;
+    transform: scale(0.6);
+  }
 
-    .paper:hover {
-        transform: scale(1)
-    }
+  .paper:hover {
+    transform: scale(0.7);
+  }
 
-    .rock {
-        position: fixed;
-        top: 30%;
-        left: 36%;
-        cursor: pointer;
-        transform: scale(0.8)
-    }
+  .rock {
+    position: fixed;
+    top: 30%;
+    left: 15%;
+    cursor: pointer;
+    transform: scale(0.6);
+  }
 
-    .rock:hover {
-        transform: scale(1)
-    }
+  .rock:hover {
+    transform: scale(0.7);
+  }
 
-    .scissors {
-        position: fixed;
-        top: 27%;
-        left: 56%;
-        cursor: pointer;
-        transform: scale(0.8)
-    }
+  .scissors {
+    position: fixed;
+    top: 27%;
+    left: 57%;
+    cursor: pointer;
+    transform: scale(0.6);
+  }
 
-    .scissors:hover {
-        transform: scale(1)
-    }
+  .scissors:hover {
+    transform: scale(0.7);
+  }
 
-    button {
-        font-size: 18px;
-    }
+  button {
+    font-size: 18px;
+    height: 50px;
+    width: 100px;
+  }
 
-    button:hover {
-        height: 7vh;
-        width: 7vw;
-        font-size: 24px;
-    }
+  button:hover {
+    height: 60px;
+    width: 120px;
+    font-size: 18px;
+  }
+
+  button:focus {
+    outline: 0;
+  }
+
+  .results {
+    position: absolute;
+    top: 73%;
+    left: 4%;
+    font-size: 15px;
+  }
+
+  .results h2 {
+    position: relative;
+    top: 40%;
+    left: 0;
+    font-size: 25px;
+  }
+
+  .stats {
+    position: absolute;
+    top: 73%;
+    left: 68%;
+    font-size: 15px;
+  }
+
+  .stats h2 {
+    position: relative;
+    top: 40%;
+    left: 0;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    left: 50%;
+    font-size: 30px;
+  }
+
+  .paper {
+    position: fixed;
+    top: 27%;
+    left: 33%;
+    cursor: pointer;
+    transform: scale(0.5);
+  }
+
+  .paper:hover {
+    transform: scale(0.6);
+  }
+
+  .rock {
+    position: fixed;
+    top: 30%;
+    left: 10%;
+    cursor: pointer;
+    transform: scale(0.5);
+  }
+
+  .rock:hover {
+    transform: scale(0.6);
+  }
+
+  .scissors {
+    position: fixed;
+    top: 27%;
+    left: 57%;
+    cursor: pointer;
+    transform: scale(0.5);
+  }
+
+  .scissors:hover {
+    transform: scale(0.6);
+  }
+
+  button {
+    font-size: 18px;
+    height: 50px;
+    width: 100px;
+  }
+
+  button:hover {
+    height: 60px;
+    width: 120px;
+    font-size: 18px;
+  }
+
+  button:focus {
+    outline: 0;
+  }
+
+  .results {
+    position: absolute;
+    top: 73%;
+    left: 4%;
+    font-size: 15px;
+  }
+
+  .results h2 {
+    position: relative;
+    top: 40%;
+    left: 0;
+    font-size: 25px;
+  }
+
+  .stats {
+    position: absolute;
+    top: 73%;
+    left: 72%;
+    font-size: 15px;
+  }
+
+  .stats h2 {
+    position: relative;
+    top: 40%;
+    left: 0;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    left: 50%;
+    font-size: 30px;
+  }
+
+  .paper {
+    position: fixed;
+    top: 27%;
+    left: 23%;
+    cursor: pointer;
+    transform: scale(0.5);
+  }
+
+  .paper:hover {
+    transform: scale(0.6);
+  }
+
+  .rock {
+    position: fixed;
+    top: 30%;
+    left: -5%;
+    cursor: pointer;
+    transform: scale(0.5);
+  }
+
+  .rock:hover {
+    transform: scale(0.6);
+  }
+
+  .scissors {
+    position: fixed;
+    top: 27%;
+    left: 53%;
+    cursor: pointer;
+    transform: scale(0.5);
+  }
+
+  .scissors:hover {
+    transform: scale(0.6);
+  }
+
+  button {
+    font-size: 18px;
+    height: 50px;
+    width: 100px;
+  }
+
+  button:hover {
+    height: 60px;
+    width: 120px;
+    font-size: 18px;
+  }
+
+  button:focus {
+    outline: 0;
+  }
+
+  .results {
+    position: absolute;
+    top: 73%;
+    left: 4%;
+    font-size: 15px;
+  }
+
+  .results h2 {
+    position: relative;
+    top: 40%;
+    left: 0;
+    font-size: 25px;
+  }
+
+  .stats {
+    position: absolute;
+    top: 73%;
+    left: 68%;
+    font-size: 15px;
+  }
+
+  .stats h2 {
+    position: relative;
+    top: 40%;
+    left: 0;
+    font-size: 25px;
+  }
 }

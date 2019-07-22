@@ -28,21 +28,21 @@ const result = function (choosenHand, aiDraws) {
 }
 
 const publish = () => {
-    document.querySelector('.pch').textContent = "Your choice:" + " " + playerHand;
-    document.querySelector('.ach').textContent = "AI choice:" + " " + aiHand;
+    document.querySelector('.results_player-choice').textContent = "Your choice:" + " " + playerHand;
+    document.querySelector('.results_ai-choice').textContent = "AI choice:" + " " + aiHand;
 
     if (gResult === "win") {
-        document.querySelector('.wiw').textContent = "The result is: player won!"; 
+        document.querySelector('.results_result').textContent = "The result is: player won!"; 
         wins++;       
-        document.querySelector('.w').textContent = "Wins: " + wins;        
+        document.querySelector('.stats_wins').textContent = "Wins: " + wins;        
     } else if (gResult === "loss") {
-        document.querySelector('.wiw').textContent = "The result is: computer won!";
+        document.querySelector('.results_result').textContent = "The result is: computer won!";
         losses++;       
-        document.querySelector('.l').textContent = "Losses: " + losses;      
+        document.querySelector('.stats_losses').textContent = "Losses: " + losses;      
     } else {
-        document.querySelector('.wiw').textContent = "The result is: draw!";
+        document.querySelector('.results_result').textContent = "The result is: draw!";
         draws++;       
-        document.querySelector('.d').textContent = "Draws: " + draws;      
+        document.querySelector('.stats_draws').textContent = "Draws: " + draws;      
     }
 }
 
